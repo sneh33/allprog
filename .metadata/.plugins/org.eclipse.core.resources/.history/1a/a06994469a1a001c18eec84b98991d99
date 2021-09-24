@@ -1,0 +1,9 @@
+package contactListApi;
+
+import org.testng.annotations.Test;
+
+public class PositiveTests {
+  @Test
+  public void f() {
+  }
+}

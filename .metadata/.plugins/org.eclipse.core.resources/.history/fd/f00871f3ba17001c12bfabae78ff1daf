@@ -1,0 +1,25 @@
+package my;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
+
+import day6.Base;
+
+public class you_testng extends Base{
+  @Test
+  public void f() throws Exception{
+	  driver.get("https://www.youtube.com/");
+	  WebElement a=driver.findElement(By.xpath("//input[@id='search']"));
+	  driver.findElement(By.xpath("//button[@id='search-icon-legacy']")).click();
+	 	  Thread.sleep(3000);
+	 	  
+	 	  Actions ac=new Actions(driver);
+	 	  ac.sendKeys("that's all i really wanna do ").click().perform();
+	 	  
+	  driver.findElement(By.linkText("That's All I Really Wanna Do Song | Teri Meri Kahaani |"
+	  		+ " Shahid Kapoor, Priyanka Chopra")).click();
+	  Thread.sleep(4000);
+  }
+}

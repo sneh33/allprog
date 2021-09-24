@@ -1,0 +1,32 @@
+package my;
+
+import static org.testng.Assert.assertTrue;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import day6.Base;
+
+public class you_testng extends Base {
+	@Test
+	public void f() throws Exception {
+
+		driver.get("file:///C:/Users/Shree/Desktop/LTI%20training/Iframe1.html");
+		driver.switchTo().frame("Bing");
+		driver.findElement(By.id("sb_form_q")).sendKeys("lti");
+		driver.findElement(By.id("sb_form_q")).sendKeys(Keys.ENTER);		
+
+		
+		
+	}
+}

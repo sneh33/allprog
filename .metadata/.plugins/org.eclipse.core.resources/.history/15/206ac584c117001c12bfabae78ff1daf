@@ -1,0 +1,80 @@
+package my;
+
+import java.util.Set;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import day6.Base;
+
+
+public class you_testng extends Base{
+  @Test
+  public void f() throws Exception{
+	  
+	  driver.get("https://www.easemytrip.com/");
+	  
+	 
+	  driver.findElement(By.id("FromSector_show")).click();
+	  driver.findElement(By.id("spn3")).click();
+	  driver.findElement(By.cssSelector("input[type='button']")).click();
+	  
+	  Alert a=driver.switchTo().alert();
+	  Thread.sleep(2000);
+	  a.accept();
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+		/*
+		 * driver.get("https://www.rediff.com"); String p=driver.getWindowHandle();
+		 * 
+		 * driver.switchTo().frame("moneyiframe");
+		 * driver.findElement(By.name("query")).sendKeys("yes bank");
+		 * driver.findElement(By.cssSelector("input[type='submit']")).click();
+		 * Thread.sleep(3000);
+		 * 
+		 * Set<String> d=driver.getWindowHandles(); for(String h:d) {
+		 * System.out.println(h);
+		 * 
+		 * if(!h.equals(p)) { driver.switchTo().window(h);
+		 * driver.findElement(By.linkText("Gainers / Losers")).click();
+		 * driver.findElement(By.cssSelector("a[href=\"//money.rediff.com/companies/" +
+		 * "rpp-infra-projects-l/11600402\"]")).click();
+		 * //Assert.assertEquals(s,"RPP Infra Projects L"); Thread.sleep(2000);
+		 * 
+		 * } }
+		 */
+	  
+		/*
+		 * driver.get("https://www.youtube.com/");
+		 * driver.findElement(By.xpath("//input[@id='search']")).
+		 * sendKeys("that's all i really wanna do ");
+		 * driver.findElement(By.xpath("//button[@id='search-icon-legacy']")).click();
+		 * Thread.sleep(3000);
+		 * 
+		 * driver.findElement(By.
+		 * linkText("That's All I Really Wanna Do Song | Teri Meri Kahaani |" +
+		 * " Shahid Kapoor, Priyanka Chopra")).click(); Thread.sleep(4000);
+		 */
+  }
+}

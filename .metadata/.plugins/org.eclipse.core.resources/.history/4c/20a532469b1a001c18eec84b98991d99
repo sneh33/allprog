@@ -1,0 +1,18 @@
+package contactListApi;
+
+import static io.restassured.RestAssured.given;
+
+import org.testng.annotations.Test;
+
+public class positive {
+  @Test
+  public void f() {
+	  given()
+		.when()
+			.get("http://3.13.86.142:3000/contacts")
+		.then()
+			.log()
+			.body()
+			.statusCode(200);
+  }
+}

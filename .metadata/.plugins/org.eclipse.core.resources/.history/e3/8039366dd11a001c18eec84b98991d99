@@ -1,0 +1,21 @@
+package gitHub;
+
+import org.testng.annotations.Test;
+
+import static io.restassured.RestAssured.*;
+
+public class gettingAllRepositories {
+  @Test(enabled=true, description="getting all repositories")
+  public void f() {
+	  given()
+	    .auth()
+	    .oauth2("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")
+	  .when()
+	    .get("https://api.github.com/user/repos")
+	  .then()
+	    .log()
+	    .body()
+	    .statusCode(200);
+	  
+  }
+}

@@ -1,0 +1,19 @@
+package contactListApi;
+
+import org.testng.annotations.Test;
+
+import static io.restassured.RestAssured.*;
+
+public class PositiveTests {
+  @Test(description="getting all contact info")
+  public void getallcontact() {
+	  
+	  			given()
+	  			.when()
+	  				.get("http://3.13.86.142:3000/contacts")
+	  			.then()
+	  				.log()
+	  				.body()
+	  				.statusCode(200);
+	  }
+}

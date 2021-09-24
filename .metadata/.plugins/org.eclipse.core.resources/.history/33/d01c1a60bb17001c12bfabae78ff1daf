@@ -1,0 +1,32 @@
+package my;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
+
+import day6.Base;
+
+public class you_testng extends Base{
+  @Test
+  public void f() throws Exception{
+      driver.get("https://www.rediff.com");
+
+	  driver.switchTo().frame("moneyiframe");
+	  driver.findElement(By.name("query")).sendKeys("yes bank");
+	  driver.findElement(By.cssSelector("input[type='submit']"));
+	  Thread.sleep(3000);
+	  
+		/*
+		 * driver.get("https://www.youtube.com/");
+		 * driver.findElement(By.xpath("//input[@id='search']")).
+		 * sendKeys("that's all i really wanna do ");
+		 * driver.findElement(By.xpath("//button[@id='search-icon-legacy']")).click();
+		 * Thread.sleep(3000);
+		 * 
+		 * driver.findElement(By.
+		 * linkText("That's All I Really Wanna Do Song | Teri Meri Kahaani |" +
+		 * " Shahid Kapoor, Priyanka Chopra")).click(); Thread.sleep(4000);
+		 */
+  }
+}

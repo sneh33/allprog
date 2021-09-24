@@ -1,0 +1,31 @@
+package Codility;
+
+import static org.junit.Assert.*;
+
+import java.util.List;
+
+import org.junit.Test;
+import org.openqa.selenium.By;
+
+public class Cass extends WebDriverTestCase {
+
+	@Test
+	public void test() {
+		
+		boolean a=webDriver.findElement(By.id("search-input")).isDisplayed();
+		assertTrue(a);
+		
+		webDriver.findElement(By.id("search-input")).sendKeys("castle");
+		webDriver.findElement(By.id("search-button")).click();
+		
+		 webDriver.findElement(By.id("search-input")).sendKeys("isla");
+	        List<String> s=webDriver.findElements(By.xpath("//ul[@id='search-results']/li"));
+
+	        assertTrue(s.size()>0);
+	        assertEquals("No results",h);
+	        assertTrue(p.size()==1);
+
+		
+	}
+
+}

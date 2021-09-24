@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="3310" started-at="2021-09-21T11:45:34Z" finished-at="2021-09-21T11:45:38Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="3310" started-at="2021-09-21T11:45:34Z" finished-at="2021-09-21T11:45:38Z">
+      <class name="gitHub.gettingAllRepositories">
+        <test-method status="PASS" signature="createRepository()[pri:0, instance:gitHub.gettingAllRepositories@4df50bcc]" name="createRepository" duration-ms="3279" started-at="2021-09-21T11:45:34Z" description="creating repository" finished-at="2021-09-21T11:45:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createRepository -->
+      </class> <!-- gitHub.gettingAllRepositories -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,19 @@
+package my;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+import day6.Base;
+
+public class you_testng extends Base{
+  @Test
+  public void f() throws Exception{
+	  driver.get("https://www.youtube.com/");
+	  driver.findElement(By.xpath("//input[@id='search']")).sendKeys("that's all i really wanna do ");
+	  driver.findElement(By.xpath("//button[@id='search-icon-legacy']")).click();
+	  
+	  Thread.sleep(3000);
+	  driver.findElement(By.xpath("//yt-formatted-string[@aria-label=\"That's All I Really Wanna Do Song | Teri Meri Kahaani | Shahid Kapoor, Priyanka Chopra by T-Series 9 years ago 2 minutes, 43 seconds 9,561,311 views\"]"));
+	  Thread.sleep(4000);
+  }
+}

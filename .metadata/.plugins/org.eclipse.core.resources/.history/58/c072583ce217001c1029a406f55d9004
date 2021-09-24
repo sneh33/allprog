@@ -1,0 +1,38 @@
+package my;
+
+import static org.testng.Assert.assertTrue;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import day6.Base;
+
+public class you_testng extends Base {
+	@Test
+	public void f() throws Exception {
+
+		driver.get("https://www.naukri.com/");
+		String a=driver.getWindowHandle();
+		
+		Set<String>c= driver.getWindowHandles();
+		
+		List<String> x= new ArrayList<>(c);
+		driver.switchTo().window(x.get(1));
+		for(int i=0;i<x.size();i++) {
+			String j=x.get(i);
+			driver.switchTo().window(x.get(i));
+			System.out.println(driver.getTitle());
+		}
+		
+		
+	}
+}

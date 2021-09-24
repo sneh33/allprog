@@ -1,0 +1,9 @@
+package loginTests;
+
+import org.testng.annotations.Test;
+
+public class Comparison {
+  @Test
+  public void f() {
+  }
+}

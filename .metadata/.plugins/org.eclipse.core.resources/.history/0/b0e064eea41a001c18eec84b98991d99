@@ -1,0 +1,50 @@
+package contactListApi;
+
+import org.json.simple.JSONObject;
+import org.testng.annotations.Test;
+
+import static io.restassured.RestAssured.*;
+
+public class PositiveTests {
+  @Test(enabled=false,description="getting all contact info")
+  public void getallcontact() {
+	  										//use RestAssured.given() if static import not used
+	  			given()
+	  			.when()
+	  				.get("http://3.13.86.142:3000/contacts")
+	  			.then()
+	  				.log()					//print
+	  				.body()
+	  				.statusCode(200);		//assertion
+	  }
+  
+  @Test(enabled=true,description="adding new contact")
+  public void addnewcontact() {
+	  
+	  JSONObject data=new JSONObject();
+	  JSONObject emp=new JSONObject();
+	  JSONObject loc=new JSONObject();
+	  
+	  loc.put("city","Mumbai");
+	  loc.put("country","India");
+	  emp.put("jobTitle", "QA");
+	  emp.put("company", "LTI");	  
+	  
+	  data.put("firstName", "John");
+	  data.put("lastName", "Smith");
+	  data.put("email", "abc@gmail.com");
+	  data.put("location", "loc");
+	  data.put("employer", "emp");
+	  
+	  			String id = given().header("Content-Type","application/json")
+	  					.body(data.toJSONString())
+	  			.when()
+	  				.post("http://3.13.86.142:3000/contacts")
+	  			.then()
+	  				.log()					//print
+	  				.body()
+	  				.statusCode(200)//assertion
+	  			.extract().path("_id");
+	  			System.out.println("id "+id);
+	  }
+}
